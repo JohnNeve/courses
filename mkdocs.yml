@@ -25,7 +25,6 @@ theme:
   font:
     text: Roboto               # Font per la lettura
     code: Fira Code            # Font speciale per i blocchi di codice
-  
 
 plugins:      
   - search
@@ -38,11 +37,11 @@ extra_javascript:
 markdown_extensions:
   - admonition                    # Riquadri colorati classici
   - pymdownx.details              # Riquadri a scomparsa (collapsible)
-  - pymdownx.superfences          # Code blocks avanzati e Tabs
+  - pymdownx.superfences:         # <-- I due punti qui sono fondamentali
       custom_fences:
-         - name: mermaid
-           class: mermaid
-           format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:              # Schede (Tabs)
       alternate_style: true
   - pymdownx.tasklist:            # Checkbox (Task lists)
