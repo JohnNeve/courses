@@ -165,3 +165,55 @@ Premi <kbd>Ctrl</kbd> + <kbd>C</kbd> per interrompere il processo nel terminale,
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen>
 </iframe>
+
+
+
+
+## 8. diagrammi
+
+```mermaid
+graph TD
+    A[Utente inserisce credenziali] --> B{Controllo Database}
+    B -- Valide --> C[Genera Token JWT]
+    C --> D[Accesso Consentito]
+    B -- Non Valide --> E[Incrementa contatore errori]
+    E --> F{Tentativi > 3?}
+    F -- Sì --> G[Blocca IP (Fail2Ban)]
+    F -- No --> H[Mostra errore]
+
+**Esempio B: Diagramma di Sequenza (TCP Handshake / MITM)**
+Perfetto per mostrare le interazioni nel tempo tra client e server.
+```markdown
+```mermaid
+sequenceDiagram
+    participant C come Client (Attaccante)
+    participant S come Server (Vittima)
+    
+    Note over C,S: Inizio Handshake TCP
+    C->>S: SYN (Seq=0)
+    S->>C: SYN-ACK (Seq=0, Ack=1)
+    C->>S: ACK (Seq=1, Ack=1)
+    Note over C,S: Connessione Stabilita
+    
+    C->>S: GET /admin-panel HTTP/1.1 (Payload malevolo)
+    S-->>C: 200 OK (Dati sensibili)
+
+---
+
+### 2. Elementi di Lettura Avanzati
+
+Assicurati di avere queste estensioni in `mkdocs.yml`:
+```yaml
+markdown_extensions:
+  - footnotes
+  - abbr
+  - pymdownx.keys
+
+
+1. **Tasti grafici:** Premi ++ctrl+alt+canc++ per riavviare.
+2. **Note a piè di pagina:** Il protocollo BGP è fondamentale per internet.[^1]
+3. **Pulsanti:** [Scarica la Topologia Packet Tracer](assets/rete.pkt){: .md-button .md-button--primary }
+
+*(Metti questo in fondo alla pagina per l'abbreviazione e la nota)*
+[^1]: BGP (Border Gateway Protocol) è il protocollo di routing esterno (EGP) di internet.
+*[BGP]: Border Gateway Protocol

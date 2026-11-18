@@ -14,9 +14,18 @@ theme:
         icon: material/brightness-4
         name: Passa al tema chiaro
   features:
+    - navigation.tabs          # Sposta le macro-categorie in alto
+    - navigation.top           # Aggiunge la freccia "Torna su" a fine pagina
+    - navigation.path          # Aggiunge le briciole di pane (Home > Corso > Lezione)
+    - navigation.footer        # Aggiunge i tasti "Lezione Precedente/Successiva" a fondo pagina
+    - search.suggest           # Suggerisce parole mentre scrivi nella barra di ricerca
     - navigation.indexes
     - navigation.expand
     - content.code.copy
+  font:
+    text: Roboto               # Font per la lettura
+    code: Fira Code            # Font speciale per i blocchi di codice
+  
 
 plugins:      
   - search
@@ -30,6 +39,10 @@ markdown_extensions:
   - admonition                    # Riquadri colorati classici
   - pymdownx.details              # Riquadri a scomparsa (collapsible)
   - pymdownx.superfences          # Code blocks avanzati e Tabs
+      custom_fences:
+         - name: mermaid
+           class: mermaid
+           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:              # Schede (Tabs)
       alternate_style: true
   - pymdownx.tasklist:            # Checkbox (Task lists)
@@ -47,7 +60,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Networking CCNA:
+  - Networking:
     - Panoramica: networking/index.md
     - 1. Introduzione: networking/01-introduzione.md
     - 2. Protocolli: networking/02-protocolli-base.md
