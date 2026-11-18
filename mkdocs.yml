@@ -1,0 +1,15 @@
+site_name: I Miei Appunti
+site_url: https://johnneve.github.io/courses/
+
+theme:
+  name: material
+  palette:
+    # Aggiunge il tasto per la dark mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Passa al tema scuro
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Passa al tema chiaro
