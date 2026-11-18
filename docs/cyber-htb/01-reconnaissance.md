@@ -145,3 +145,23 @@ $$
 
 Se devi indicare scorciatoie da tastiera, usa i tag HTML standard:
 Premi <kbd>Ctrl</kbd> + <kbd>C</kbd> per interrompere il processo nel terminale, oppure <kbd>F12</kbd> per aprire gli strumenti di sviluppo.
+
+<iframe 
+    src="https://drive.google.com/file/d/1urCOPKL99EHb3hI3S6v6we2ewmU0H7FY/view?usp=drive_link" 
+    width="100%" 
+    height="600" 
+    style="border: none; border-radius: 8px;" 
+    allow="autoplay">
+</iframe>
+
+
+
+<iframe 
+    width="100%" 
+    style="aspect-ratio: 16/9; border-radius: 8px;" 
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
