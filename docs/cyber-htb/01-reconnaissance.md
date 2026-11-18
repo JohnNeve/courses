@@ -168,26 +168,73 @@ Premi <kbd>Ctrl</kbd> + <kbd>C</kbd> per interrompere il processo nel terminale,
 
 
 
+## 8. Diagrammi
 
-## 8. diagrammi
+**Esempio A: Diagramma di Flusso**
+
+```mermaid
+graph LR
+    classDef normale fill:#1e1e1e,stroke:#4fc3f7,stroke-width:2px,color:#ffffff
+    classDef pericolo fill:#2b0000,stroke:#ff5252,stroke-width:2px,color:#ffcdd2
+    classDef successo fill:#00251a,stroke:#69f0ae,stroke-width:2px,color:#b9f6ca
+
+    A[Scansione Nmap] --> B{Porta 22 Aperta?}
+    B -->|Sì| C[Brute Force SSH]
+    B -->|No| D[Scansione UDP]
+
+    class A,B normale
+    class C pericolo
+    class D successo
+```
 
 ```mermaid
 graph TD
     A[Utente inserisce credenziali] --> B{Controllo Database}
-    B -- Valide --> C[Genera Token JWT]
+    B -->|Valide| C[Genera Token JWT]
+    B -->|Non Valide| E[Incrementa contatore errori]
+
+    style C fill:#4caf50,stroke:#2e7d32,color:#ffffff
+    style E fill:#ef5350,stroke:#c62828,color:#ffffff
+```
+
+```mermaid
+graph TD
+    classDef successo fill:#4caf50,stroke:#2e7d32,stroke-width:2px,color:#fff
+    classDef errore fill:#ef5350,stroke:#c62828,stroke-width:2px,color:#fff
+
+    A[Utente inserisce credenziali] --> B{Controllo Database}
+    B -->|Valide| C[Genera Token]
     C --> D[Accesso Consentito]
-    B -- Non Valide --> E[Incrementa contatore errori]
-    E --> F{Tentativi > 3?}
-    F -- Sì --> G[Blocca IP (Fail2Ban)]
-    F -- No --> H[Mostra errore]
+    B -->|Non Valide| E[Incrementa contatore]
+    E --> F[Blocca IP]
+
+    class C,D successo
+    class E,F errore
+```
+
+```mermaid
+%%{init: {'theme': 'dark', 'themeVariables': { 'edgeLabelBackground':'transparent' }}}%%
+graph LR
+    classDef normale fill:#1e1e1e,stroke:#4fc3f7,stroke-width:2px,color:#ffffff
+    classDef pericolo fill:#3e2723,stroke:#ff5252,stroke-width:2px,color:#ffffff
+    classDef successo fill:#1b5e20,stroke:#69f0ae,stroke-width:2px,color:#ffffff
+
+    A[Scansione Nmap] --> B{Porta 22 Aperta?}
+    B -->|Sì| C[Brute Force SSH]
+    B -->|No| D[Scansione UDP]
+
+    class A,B normale
+    class C pericolo
+    class D successo
+```
 
 **Esempio B: Diagramma di Sequenza (TCP Handshake / MITM)**
 Perfetto per mostrare le interazioni nel tempo tra client e server.
-```markdown
+
 ```mermaid
 sequenceDiagram
-    participant C come Client (Attaccante)
-    participant S come Server (Vittima)
+    participant C as Client (Attaccante)
+    participant S as Server (Vittima)
     
     Note over C,S: Inizio Handshake TCP
     C->>S: SYN (Seq=0)
@@ -197,23 +244,34 @@ sequenceDiagram
     
     C->>S: GET /admin-panel HTTP/1.1 (Payload malevolo)
     S-->>C: 200 OK (Dati sensibili)
+```
+
+```mermaid
+sequenceDiagram
+    participant A as Attaccante
+    participant S as Server Web
+    
+    rect rgb(30, 41, 59)
+        Note over A,S: Fase di Reconnaissance (Sfondo Blu Scuro)
+        A->>S: GET / HTTP/1.1
+        S-->>A: 200 OK (Server: Apache/2.4)
+    end
+    
+    rect rgb(69, 10, 10)
+        Note over A,S: Fase di Exploitation (Sfondo Rosso Scuro)
+        A->>S: POST /login (SQLi Payload)
+        S-->>A: 500 Internal Server Error (Dati esposti)
+    end
+```
 
 ---
 
-### 2. Elementi di Lettura Avanzati
-
-Assicurati di avere queste estensioni in `mkdocs.yml`:
-```yaml
-markdown_extensions:
-  - footnotes
-  - abbr
-  - pymdownx.keys
-
+## 9. Elementi di Lettura Avanzati
 
 1. **Tasti grafici:** Premi ++ctrl+alt+canc++ per riavviare.
 2. **Note a piè di pagina:** Il protocollo BGP è fondamentale per internet.[^1]
 3. **Pulsanti:** [Scarica la Topologia Packet Tracer](assets/rete.pkt){: .md-button .md-button--primary }
 
-*(Metti questo in fondo alla pagina per l'abbreviazione e la nota)*
+*(Questo blocco sotto genera il fumetto e la nota a fondo pagina)*
 [^1]: BGP (Border Gateway Protocol) è il protocollo di routing esterno (EGP) di internet.
 *[BGP]: Border Gateway Protocol

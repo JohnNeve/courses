@@ -35,9 +35,12 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 markdown_extensions:
+  - footnotes                     # <-- AGGIUNTO: per le note a piè di pagina [^1]
+  - abbr                          # <-- AGGIUNTO: per i tooltip (es. BGP)
+  - pymdownx.keys                 # <-- AGGIUNTO: per i tasti grafici ++ctrl++
   - admonition                    # Riquadri colorati classici
   - pymdownx.details              # Riquadri a scomparsa (collapsible)
-  - pymdownx.superfences:         # <-- I due punti qui sono fondamentali
+  - pymdownx.superfences:         
       custom_fences:
         - name: mermaid
           class: mermaid
