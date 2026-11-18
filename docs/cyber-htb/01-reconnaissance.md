@@ -147,14 +147,14 @@ Se devi indicare scorciatoie da tastiera, usa i tag HTML standard:
 Premi <kbd>Ctrl</kbd> + <kbd>C</kbd> per interrompere il processo nel terminale, oppure <kbd>F12</kbd> per aprire gli strumenti di sviluppo.
 
 <iframe 
-    src="https://drive.google.com/file/d/1urCOPKL99EHb3hI3S6v6we2ewmU0H7FY/view?usp=drive_link" 
+    src="https://drive.google.com/file/d/1urCOPKL99EHb3hI3S6v6we2ewmU0H7FY/preview" 
     width="100%" 
     height="600" 
     style="border: none; border-radius: 8px;" 
     allow="autoplay">
 </iframe>
 
-
+**GET RICKROLLED**
 
 <iframe 
     width="100%" 
