@@ -13,3 +13,44 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Passa al tema chiaro
+  features:
+    - navigation.indexes
+    - navigation.expand
+    - content.code.copy
+
+plugins:      
+  - search
+  - tags
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+  - admonition                    # Riquadri colorati classici
+  - pymdownx.details              # Riquadri a scomparsa (collapsible)
+  - pymdownx.superfences          # Code blocks avanzati e Tabs
+  - pymdownx.tabbed:              # Schede (Tabs)
+      alternate_style: true
+  - pymdownx.tasklist:            # Checkbox (Task lists)
+      custom_checkbox: true
+  - pymdownx.highlight:           # Evidenziazione sintassi
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite         # Codice in linea
+  - pymdownx.arithmatex:          # Formule matematiche (LaTeX)
+      generic: true
+  - pymdownx.mark                 # Evidenziatore testo (==testo==)
+  - attr_list                     # Allineamento e CSS personalizzato
+  - md_in_html                    # Markdown dentro l'HTML
+
+nav:
+  - Home: index.md
+  - Networking CCNA:
+    - Panoramica: networking/index.md
+    - 1. Introduzione: networking/01-introduzione.md
+    - 2. Protocolli: networking/02-protocolli-base.md
+  - Cybersecurity HTB:
+    - Metodologia: cyber-htb/index.md
+    - 1. Recon: cyber-htb/01-reconnaissance.md
