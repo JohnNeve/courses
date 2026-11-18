@@ -1,0 +1,1354 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Riferimento completo a tutte le formattazioni disponibili">
+      
+      
+      
+        <link rel="canonical" href="https://johnneve.github.io/courses/cyber-htb/01-reconnaissance/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Cheatsheet MkDocs Material - I Miei Appunti</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#titolo-principale-della-pagina-h1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="I Miei Appunti" class="md-header__button md-logo" aria-label="I Miei Appunti" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            I Miei Appunti
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cheatsheet MkDocs Material
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passa al tema scuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passa al tema scuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passa al tema chiaro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passa al tema chiaro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../networking/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Networking
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Cybersecurity HTB
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="I Miei Appunti" class="md-nav__button md-logo" aria-label="I Miei Appunti" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    I Miei Appunti
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../networking/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Networking
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Networking
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../networking/01-introduzione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduzione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../networking/02-protocolli-base/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Protocolli
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cybersecurity HTB
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cybersecurity HTB
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Recon
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Recon
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-riquadri-colorati-admonitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Riquadri Colorati (Admonitions)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Riquadri Colorati (Admonitions)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#riquadri-a-scomparsa-collapsible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riquadri a scomparsa (Collapsible)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-blocchi-di-codice-e-terminale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Blocchi di Codice e Terminale
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Blocchi di Codice e Terminale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schede-per-confrontare-il-codice-tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schede per confrontare il codice (Tabs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-liste-e-liste-di-controllo-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Liste e Liste di Controllo (Task)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tabelle-dati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tabelle Dati
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-immagini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Immagini
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-matematica-e-formule-latex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Matematica e Formule (LaTeX)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-citazioni-e-scorciatoie-da-tastiera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Citazioni e Scorciatoie da Tastiera
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-diagrammi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Diagrammi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-elementi-di-lettura-avanzati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Elementi di Lettura Avanzati
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-riquadri-colorati-admonitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Riquadri Colorati (Admonitions)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Riquadri Colorati (Admonitions)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#riquadri-a-scomparsa-collapsible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riquadri a scomparsa (Collapsible)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-blocchi-di-codice-e-terminale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Blocchi di Codice e Terminale
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Blocchi di Codice e Terminale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schede-per-confrontare-il-codice-tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schede per confrontare il codice (Tabs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-liste-e-liste-di-controllo-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Liste e Liste di Controllo (Task)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tabelle-dati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tabelle Dati
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-immagini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Immagini
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-matematica-e-formule-latex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Matematica e Formule (LaTeX)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-citazioni-e-scorciatoie-da-tastiera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Citazioni e Scorciatoie da Tastiera
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-diagrammi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Diagrammi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-elementi-di-lettura-avanzati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Elementi di Lettura Avanzati
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Cybersecurity HTB
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">markdown</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sintassi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">template</span>
+      
+    
+  </nav>
+
+
+
+<h1 id="titolo-principale-della-pagina-h1">Titolo Principale della Pagina (H1)</h1>
+<p>Questo è un file di riferimento rapido. Puoi copiare e incollare i blocchi che ti servono. 
+Puoi usare il testo in <strong>grassetto</strong>, in <em>corsivo</em>, o anche <mark>evidenziato in giallo</mark>.</p>
+<h2 id="1-riquadri-colorati-admonitions">1. Riquadri Colorati (Admonitions)</h2>
+<p>Usa i riquadri per far risaltare concetti importanti.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota standard</p>
+<p>Questo è il riquadro base, utile per definizioni o commenti.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Suggerimento</p>
+<p>Ottimo per le "best practice" o scorciatoie.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attenzione</p>
+<p>Per avvisare di possibili errori non critici.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Pericolo / Errore Critico</p>
+<p>Da usare per concetti che possono distruggere sistemi (es. <code>rm -rf</code>).</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Esempio Pratico</p>
+<p>Mostra un esempio di implementazione.</p>
+</div>
+<h3 id="riquadri-a-scomparsa-collapsible">Riquadri a scomparsa (Collapsible)</h3>
+<details class="abstract">
+<summary>Soluzione dell'esercizio (Clicca per espandere)</summary>
+<p>Puoi nascondere il testo usando <code>???</code> invece di <code>!!!</code>. Ottimo per non spoilerare le soluzioni degli esercizi di programmazione!</p>
+</details>
+<details class="success" open="open">
+<summary>Riquadro aperto di default</summary>
+<p>Usando <code>???+</code> il riquadro è comprimibile ma parte già aperto.</p>
+</details>
+<hr />
+<h2 id="2-blocchi-di-codice-e-terminale">2. Blocchi di Codice e Terminale</h2>
+<p>Puoi evidenziare la sintassi di quasi tutti i linguaggi di programmazione e avere il tasto "Copia" in automatico.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Esempio di codice Python</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">saluta</span><span class="p">(</span><span class="n">nome</span><span class="p">):</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Ciao, </span><span class="si">{</span><span class="n">nome</span><span class="si">}</span><span class="s2">!"</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">return</span> <span class="kc">True</span>
+</span></code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Esempio di terminale</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+</span></code></pre></div>
+<h3 id="schede-per-confrontare-il-codice-tabs">Schede per confrontare il codice (Tabs)</h3>
+<p>Le schede sono perfette per mostrare come fare la stessa cosa in linguaggi o sistemi operativi diversi:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows (PowerShell)</label><label for="__tabbed_1_2">Linux (Bash)</label><label for="__tabbed_1_3">Cisco IOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">ipconfig</span> <span class="p">/</span><span class="n">all</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ip<span class="w"> </span>a
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>show ip interface brief
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="3-liste-e-liste-di-controllo-task">3. Liste e Liste di Controllo (Task)</h2>
+<p>Le liste classiche:</p>
+<ul>
+<li>Elemento 1</li>
+<li>Elemento 2<ul>
+<li>Sotto-elemento 2.1</li>
+<li>Sotto-elemento 2.2</li>
+</ul>
+</li>
+<li>Elemento 3</li>
+</ul>
+<p>Le liste di controllo (utili per le metodologie di Penetration Testing):</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Eseguire ping sweep</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Scansione Nmap delle porte aperte</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Ricerca vulnerabilità sui servizi (da fare)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Exploitation (da fare)</li>
+</ul>
+<hr />
+<h2 id="4-tabelle-dati">4. Tabelle Dati</h2>
+<p>Le tabelle sono perfette per riassumere caratteristiche o parametri.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Protocollo</th>
+<th style="text-align: center;">Porta Predefinita</th>
+<th style="text-align: center;">Trasporto</th>
+<th style="text-align: right;">Uso Principale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>HTTP</strong></td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">TCP</td>
+<td style="text-align: right;">Navigazione web in chiaro</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HTTPS</strong></td>
+<td style="text-align: center;">443</td>
+<td style="text-align: center;">TCP</td>
+<td style="text-align: right;">Navigazione web cifrata</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>DNS</strong></td>
+<td style="text-align: center;">53</td>
+<td style="text-align: center;">UDP/TCP</td>
+<td style="text-align: right;">Risoluzione nomi a dominio</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SSH</strong></td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">TCP</td>
+<td style="text-align: right;">Accesso remoto sicuro</td>
+</tr>
+</tbody>
+</table>
+<p><em>(I due punti <code>:</code> nella seconda riga definiscono l'allineamento: sinistra, centro, centro, destra).</em></p>
+<hr />
+<h2 id="5-immagini">5. Immagini</h2>
+<p>Immagine standard con testo alternativo (per accessibilità):
+<img alt="Schema della Topologia di Rete" src="img/topologia.png" /></p>
+<p>Se vuoi aggiungere una didascalia sotto l'immagine, puoi usare l'HTML di base:</p>
+<figure>
+  <img src="img/topologia.png" alt="Schema della Topologia di Rete" />
+  <figcaption>Fig 1. - Architettura di rete aziendale standard</figcaption>
+</figure>
+
+<hr />
+<h2 id="6-matematica-e-formule-latex">6. Matematica e Formule (LaTeX)</h2>
+<p><em>Nota: Richiede configurazione Javascript aggiuntiva in mkdocs.yml</em></p>
+<p>Formule all'interno del testo (inline): L'equazione della relatività è <span class="arithmatex">\(E = mc^2\)</span>.</p>
+<p>Formula come blocco isolato:
+$$
+f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi
+$$</p>
+<hr />
+<h2 id="7-citazioni-e-scorciatoie-da-tastiera">7. Citazioni e Scorciatoie da Tastiera</h2>
+<blockquote>
+<p>Questa è una citazione a blocco (Blockquote).
+Utile per citare manuali, RFC o documentazioni ufficiali.</p>
+</blockquote>
+<p>Se devi indicare scorciatoie da tastiera, usa i tag HTML standard:
+Premi <kbd>Ctrl</kbd> + <kbd>C</kbd> per interrompere il processo nel terminale, oppure <kbd>F12</kbd> per aprire gli strumenti di sviluppo.</p>
+<iframe 
+    src="https://drive.google.com/file/d/1urCOPKL99EHb3hI3S6v6we2ewmU0H7FY/preview" 
+    width="100%" 
+    height="600" 
+    style="border: none; border-radius: 8px;" 
+    allow="autoplay">
+</iframe>
+
+<p><strong>GET RICKROLLED</strong></p>
+<iframe 
+    width="100%" 
+    style="aspect-ratio: 16/9; border-radius: 8px;" 
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
+<h2 id="8-diagrammi">8. Diagrammi</h2>
+<p><strong>Esempio A: Diagramma di Flusso</strong></p>
+<pre class="mermaid"><code>graph LR
+    classDef normale fill:#1e1e1e,stroke:#4fc3f7,stroke-width:2px,color:#ffffff
+    classDef pericolo fill:#2b0000,stroke:#ff5252,stroke-width:2px,color:#ffcdd2
+    classDef successo fill:#00251a,stroke:#69f0ae,stroke-width:2px,color:#b9f6ca
+
+    A[Scansione Nmap] --&gt; B{Porta 22 Aperta?}
+    B --&gt;|Sì| C[Brute Force SSH]
+    B --&gt;|No| D[Scansione UDP]
+
+    class A,B normale
+    class C pericolo
+    class D successo</code></pre>
+<pre class="mermaid"><code>graph TD
+    A[Utente inserisce credenziali] --&gt; B{Controllo Database}
+    B --&gt;|Valide| C[Genera Token JWT]
+    B --&gt;|Non Valide| E[Incrementa contatore errori]
+
+    style C fill:#4caf50,stroke:#2e7d32,color:#ffffff
+    style E fill:#ef5350,stroke:#c62828,color:#ffffff</code></pre>
+<pre class="mermaid"><code>graph TD
+    classDef successo fill:#4caf50,stroke:#2e7d32,stroke-width:2px,color:#fff
+    classDef errore fill:#ef5350,stroke:#c62828,stroke-width:2px,color:#fff
+
+    A[Utente inserisce credenziali] --&gt; B{Controllo Database}
+    B --&gt;|Valide| C[Genera Token]
+    C --&gt; D[Accesso Consentito]
+    B --&gt;|Non Valide| E[Incrementa contatore]
+    E --&gt; F[Blocca IP]
+
+    class C,D successo
+    class E,F errore</code></pre>
+<pre class="mermaid"><code>%%{init: {'theme': 'dark', 'themeVariables': { 'edgeLabelBackground':'transparent' }}}%%
+graph LR
+    classDef normale fill:#1e1e1e,stroke:#4fc3f7,stroke-width:2px,color:#ffffff
+    classDef pericolo fill:#3e2723,stroke:#ff5252,stroke-width:2px,color:#ffffff
+    classDef successo fill:#1b5e20,stroke:#69f0ae,stroke-width:2px,color:#ffffff
+
+    A[Scansione Nmap] --&gt; B{Porta 22 Aperta?}
+    B --&gt;|Sì| C[Brute Force SSH]
+    B --&gt;|No| D[Scansione UDP]
+
+    class A,B normale
+    class C pericolo
+    class D successo</code></pre>
+<p><strong>Esempio B: Diagramma di Sequenza (TCP Handshake / MITM)</strong>
+Perfetto per mostrare le interazioni nel tempo tra client e server.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant C as Client (Attaccante)
+    participant S as Server (Vittima)
+
+    Note over C,S: Inizio Handshake TCP
+    C-&gt;&gt;S: SYN (Seq=0)
+    S-&gt;&gt;C: SYN-ACK (Seq=0, Ack=1)
+    C-&gt;&gt;S: ACK (Seq=1, Ack=1)
+    Note over C,S: Connessione Stabilita
+
+    C-&gt;&gt;S: GET /admin-panel HTTP/1.1 (Payload malevolo)
+    S--&gt;&gt;C: 200 OK (Dati sensibili)</code></pre>
+<pre class="mermaid"><code>sequenceDiagram
+    participant A as Attaccante
+    participant S as Server Web
+
+    rect rgb(30, 41, 59)
+        Note over A,S: Fase di Reconnaissance (Sfondo Blu Scuro)
+        A-&gt;&gt;S: GET / HTTP/1.1
+        S--&gt;&gt;A: 200 OK (Server: Apache/2.4)
+    end
+
+    rect rgb(69, 10, 10)
+        Note over A,S: Fase di Exploitation (Sfondo Rosso Scuro)
+        A-&gt;&gt;S: POST /login (SQLi Payload)
+        S--&gt;&gt;A: 500 Internal Server Error (Dati esposti)
+    end</code></pre>
+<hr />
+<h2 id="9-elementi-di-lettura-avanzati">9. Elementi di Lettura Avanzati</h2>
+<ol>
+<li><strong>Tasti grafici:</strong> Premi ++ctrl+alt+canc++ per riavviare.</li>
+<li><strong>Note a piè di pagina:</strong> Il protocollo <abbr title="Border Gateway Protocol">BGP</abbr> è fondamentale per internet.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li><strong>Pulsanti:</strong> <a class="md-button md-button--primary" href="assets/rete.pkt">Scarica la Topologia Packet Tracer</a></li>
+</ol>
+<p><em>(Questo blocco sotto genera il fumetto e la nota a fondo pagina)</em></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><abbr title="Border Gateway Protocol">BGP</abbr> (Border Gateway Protocol) è il protocollo di routing esterno (EGP) di internet.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Metodologia">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Metodologia
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.path", "navigation.footer", "search.suggest", "navigation.indexes", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

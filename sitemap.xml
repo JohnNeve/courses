@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://johnneve.github.io/courses/</loc>
+         <lastmod>2026-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://johnneve.github.io/courses/cyber-htb/</loc>
+         <lastmod>2026-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://johnneve.github.io/courses/cyber-htb/01-reconnaissance/</loc>
+         <lastmod>2026-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://johnneve.github.io/courses/networking/</loc>
+         <lastmod>2026-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://johnneve.github.io/courses/networking/01-introduzione/</loc>
+         <lastmod>2026-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://johnneve.github.io/courses/networking/02-protocolli-base/</loc>
+         <lastmod>2026-11-18</lastmod>
+    </url>
+</urlset>
